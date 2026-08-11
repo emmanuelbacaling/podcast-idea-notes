@@ -14,6 +14,7 @@ const categoryClass: Record<string, string> = {
   Storytelling: 'border-amber-100 bg-amber-50 text-amber-700',
   'Deep Dive': 'border-cyan-100 bg-cyan-50 text-cyan-600',
   'Pop Culture': 'border-rose-100 bg-rose-50 text-rose-600',
+  Finance: 'border-green-100 bg-green-50 text-green-700',
 };
 
 const statusClass: Record<string, string> = {
