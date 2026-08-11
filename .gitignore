@@ -19,6 +19,15 @@ coverage
 .env.*
 !.env.example
 
+# terraform
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.*
+terraform/terraform.tfvars
+terraform/.terraform.lock.hcl
+terraform/tfplan
+frontend-build.zip
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
