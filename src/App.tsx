@@ -61,7 +61,7 @@ const App = () => {
           {successMessage}
         </div>
       ) : null}
-      <div className="mx-auto grid min-h-svh w-full max-w-none overflow-hidden bg-white/90 backdrop-blur-md sm:min-h-[calc(100svh-20px)] sm:rounded-[28px] sm:border sm:border-slate-200/90 sm:shadow-[0_30px_80px_rgba(17,24,39,0.08)] lg:min-h-[calc(100svh-48px)] lg:max-w-312.5 lg:grid-cols-[390px_1fr]">
+      <div className="mx-auto grid min-h-svh w-full max-w-none grid-cols-1 overflow-hidden bg-white/90 backdrop-blur-md sm:min-h-[calc(100svh-20px)] sm:rounded-[28px] sm:border sm:border-slate-200/90 sm:shadow-[0_30px_80px_rgba(17,24,39,0.08)] lg:min-h-[calc(100svh-48px)] lg:max-w-312.5 lg:grid-cols-[390px_1fr]">
         <div className={`${activeNoteId ? 'hidden lg:flex' : 'flex'}`}>
           <NotesSidebar
             notes={notes}
