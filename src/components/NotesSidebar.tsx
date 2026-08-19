@@ -59,7 +59,7 @@ const NotesSidebar = ({
   return (
     <aside className="relative flex min-h-full w-full flex-col bg-slate-50 selection:bg-indigo-100 lg:border-r lg:border-slate-200/80">
       <header className="relative rounded-t-3xl border-b border-slate-100 bg-white px-5 pb-4 pt-8 shadow-sm">
-        <div className="mb-1 flex items-center justify-between">
+        <div className="mb-1 flex items-center justify-between pr-12">
           <div className="flex items-center gap-2">
             <div className="rounded-xl bg-indigo-600 p-2 text-white shadow-md shadow-indigo-200">
               <Mic className="h-5 w-5" />
@@ -68,7 +68,7 @@ const NotesSidebar = ({
               <p className="font-mono text-xs font-bold tracking-widest text-indigo-600 uppercase">
                 PodcastLab
               </p>
-              <h1 className="font-display text-2xl font-bold tracking-tight text-slate-800">
+              <h1 className="font-display text-xl font-bold tracking-tight text-slate-800 sm:text-2xl">
                 Episode Ideas
               </h1>
             </div>
@@ -126,7 +126,7 @@ const NotesSidebar = ({
               void handleSearch(value);
             }}
             placeholder="Search titles, category, tags..."
-            className="w-full rounded-xl border border-transparent bg-slate-100 py-2 pl-9 pr-4 text-sm text-slate-700 outline-none transition-all duration-200 placeholder:text-slate-400 focus:border-indigo-400 focus:bg-white focus:ring-2 focus:ring-indigo-100"
+            className={`w-full rounded-xl border border-transparent bg-slate-100 py-2 pl-9 text-sm text-slate-700 outline-none transition-all duration-200 placeholder:text-slate-400 focus:border-indigo-400 focus:bg-white focus:ring-2 focus:ring-indigo-100 ${query ? 'pr-12' : 'pr-4'}`}
           />
           {query && (
             <button

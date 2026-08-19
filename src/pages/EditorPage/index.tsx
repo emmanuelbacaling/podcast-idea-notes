@@ -136,26 +136,26 @@ const EditorPage = ({
 
   return (
     <section className="flex h-full flex-col bg-white selection:bg-indigo-100">
-      <header className="flex items-center justify-between border-b border-slate-100 bg-slate-50 px-4 py-3">
-        <div className="flex items-center gap-2">
+      <header className="flex items-center justify-between gap-2 border-b border-slate-100 bg-slate-50 px-4 py-3">
+        <div className="flex min-w-0 flex-1 items-center gap-2">
           <button
             type="button"
             onClick={onBack}
-            className="cursor-pointer rounded-xl p-2 text-slate-600 transition duration-150 hover:bg-slate-200 lg:hidden"
+            className="shrink-0 cursor-pointer rounded-xl p-2 text-slate-600 transition duration-150 hover:bg-slate-200 lg:hidden"
             title="Go Back"
           >
             <ArrowLeft className="h-5 w-5" />
           </button>
-          <div className="flex flex-col">
+          <div className="flex min-w-0 flex-col">
             <span className="font-mono text-[10px] font-semibold tracking-wider text-slate-400 uppercase">
               Editing Idea
             </span>
-            <span className="max-w-37.5 truncate text-sm font-semibold text-slate-700">
+            <span className="block truncate text-sm font-semibold text-slate-700">
               {note.title || 'Untitled Note'}
             </span>
           </div>
         </div>
-        <div className="flex items-center gap-1.5">
+        <div className="flex shrink-0 items-center gap-1.5">
           <button
             type="button"
             className="cursor-pointer rounded-xl p-2 text-red-500 transition duration-150 hover:bg-red-50"
