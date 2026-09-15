@@ -35,7 +35,11 @@ const NotesSidebar = ({
       const searchSource =
         `${note.title} ${note.summary} ${note.category}`.toLowerCase();
       const matchesQuery = searchSource.includes(query.toLowerCase());
-      const matchesCategory = category === 'All' || note.category === category;
+      const matchesCategory =
+        category === 'Recorded'
+          ? note.status === 'Recorded'
+          : (category === 'All' || note.category === category) &&
+            note.status !== 'Recorded';
       return matchesQuery && matchesCategory;
     });
   }, [category, filtered, notes, query]);
@@ -151,8 +155,12 @@ const NotesSidebar = ({
               aria-selected={category === item}
               className={`cursor-pointer rounded-lg px-3 py-1.5 text-xs font-medium whitespace-nowrap transition-all duration-200 ${
                 category === item
-                  ? 'scale-[1.02] bg-indigo-600 text-white shadow-sm shadow-indigo-100'
-                  : 'border border-slate-100 bg-slate-50 text-slate-600 hover:bg-slate-100'
+                  ? item === 'Recorded'
+                    ? 'scale-[1.02] bg-emerald-600 text-white shadow-sm shadow-emerald-100'
+                    : 'scale-[1.02] bg-indigo-600 text-white shadow-sm shadow-indigo-100'
+                  : item === 'Recorded'
+                    ? 'border border-emerald-100 bg-emerald-50 text-emerald-700 hover:bg-emerald-100'
+                    : 'border border-slate-100 bg-slate-50 text-slate-600 hover:bg-slate-100'
               }`}
               onClick={() => setCategory(item)}
             >

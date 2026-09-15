@@ -9,6 +9,7 @@ export const CATEGORIES = [
   'Deep Dive',
   'Pop Culture',
   'Finance',
+  'Recorded',
 ] as const;
 
 export const DURATIONS = [
