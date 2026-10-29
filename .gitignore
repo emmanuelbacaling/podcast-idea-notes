@@ -38,3 +38,6 @@ frontend-build.zip
 *.njsproj
 *.sln
 *.sw?
+
+# vercel
+.vercel
